@@ -524,4 +524,17 @@ final class AccountsApiResourceSwagger {
         public Integer resourceId;
         public PutAccountsChanges changes;
     }
+
+    @ApiModel(value = "DeleteAccountsTypeAccountIdResponse")
+    public static final class DeleteAccountsTypeAccountIdResponse {
+
+        private DeleteAccountsTypeAccountIdResponse() {}
+
+        @ApiModelProperty(example = "1")
+        public Integer officeId;
+        @ApiModelProperty(example = "1")
+        public Integer clientId;
+        @ApiModelProperty(example = "1")
+        public Integer resourceId;
+    }
 }

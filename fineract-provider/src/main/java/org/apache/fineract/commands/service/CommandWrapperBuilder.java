@@ -2863,6 +2863,14 @@ public class CommandWrapperBuilder {
         return this;
     }
 
+    public CommandWrapperBuilder deleteAccount(String accountType, final Long accountId) {
+        this.entityName = accountType.toUpperCase() + "ACCOUNT";
+        this.actionName = "DELETE";
+        this.entityId = accountId;
+        this.href = "/accounts/" + accountType + "/" + accountId;
+        return this;
+    }
+
     public CommandWrapperBuilder createProductCommand(String productType, String command, final Long productId) {
         this.entityName = productType.toUpperCase() + "PRODUCT";
         this.actionName = "CREATE" + "_" + command.toUpperCase();
